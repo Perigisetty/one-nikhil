@@ -21,8 +21,6 @@
     </properties>
 
     <dependencies>
-
-        <!-- JUnit 5 for testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -30,20 +28,16 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Servlet API (for web apps, provided by Tomcat etc.) -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
-
-            <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -54,7 +48,6 @@
                 </configuration>
             </plugin>
 
-            <!-- WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -64,40 +57,12 @@
                 </configuration>
             </plugin>
 
-            <!-- JAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
             </plugin>
 
-            <!-- SonarQube Plugin -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.10.0.2594</version>
-            </plugin>
-
-        </plugins>
-    </build>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexusRepo</id>
-            <url>http://34.208.218.12:8081/repository/sample-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexusRepo</id>
-            <url>http://44.202.251.20:8081/repository/flm-releases/</url>
-        </repository>
-    </distributionManagement>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven1</id>
-            <name>Maven Central</name>
-            <url>https://repo1.maven.org/maven2</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-</project>
